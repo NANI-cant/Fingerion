@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ec9ccaac974f499796b6c1ecece244, type: 3}
+  m_Name: NaturePack
+  m_EditorClassIdentifier: 
+  _id: 3
+  _chunks:
+  - {fileID: 6365151099063958254, guid: b681e20a17ccf644cbd0184f83eab970, type: 3}
+  - {fileID: 6365151099063958254, guid: c21567abb253c7443b7989150dfdf5d8, type: 3}
+  - {fileID: 6365151099063958254, guid: b9bcaabb406012f469984a68339869c8, type: 3}
+  - {fileID: 6365151099063958254, guid: 7a1a88b146f455741ba061a5abcb75db, type: 3}
+  - {fileID: 6365151099063958254, guid: 809043489bfe7504e8ebf79342ca6b60, type: 3}
+  - {fileID: 6365151099063958254, guid: a4c1df986e4eb1d40a40973efbe890f0, type: 3}
+  _tile: {fileID: 4863464941480631520, guid: 647d4b9aa56760841ad73b52e9d3d999, type: 3}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ec9ccaac974f499796b6c1ecece244, type: 3}
+  m_Name: CityPack
+  m_EditorClassIdentifier: 
+  _id: 0
+  _chunks:
+  - {fileID: 5562026402166729356, guid: d9fdb8564ab0f374d8eace03b9410c1a, type: 3}
+  - {fileID: 4341860552722600681, guid: 14f3eade3483e9b4292f732465dccfe0, type: 3}
+  - {fileID: 6365151099063958254, guid: c8f295d21175b414999895797efeeea3, type: 3}
+  - {fileID: 6365151099063958254, guid: e97b3ee6a5080b04bb363f0c1dc823f5, type: 3}
+  - {fileID: 6365151099063958254, guid: d0ba96fea5094f4409a12e77609132ce, type: 3}
+  - {fileID: 6365151099063958254, guid: 9f7a9297fa2d1c646b3ab1b1e5841a31, type: 3}
+  _tile: {fileID: 4863464941480631520, guid: 554e42e53caedb345b2c906eaafbf3e3, type: 3}

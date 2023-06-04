@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ec9ccaac974f499796b6c1ecece244, type: 3}
+  m_Name: DesertPack
+  m_EditorClassIdentifier: 
+  _id: 2
+  _chunks:
+  - {fileID: 5562026402166729356, guid: e66a394f88f97154e956c45736175680, type: 3}
+  - {fileID: 5562026402166729356, guid: e9cd51cbf40f48f4dbfa1d3e0231f798, type: 3}
+  - {fileID: 5562026402166729356, guid: 5568984cf299e984688b3a82129bd4ea, type: 3}
+  - {fileID: 5562026402166729356, guid: 6f668da8aa049d74eba2733ab16104e8, type: 3}
+  - {fileID: 5562026402166729356, guid: 6f8afac23b8abb541bd281e044eb8456, type: 3}
+  _tile: {fileID: 4863464941480631520, guid: 8476314cfb4d58549b1d480fa3ab0e01, type: 3}

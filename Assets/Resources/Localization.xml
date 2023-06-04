@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Key Name="Shop">
+		<Translates>
+			<ru>магазин</ru>
+			<en-us>shop</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Settings">
+		<Translates>
+			<ru>настройки</ru>
+			<en-us>settings</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Rewards">
+		<Translates>
+			<ru>награды</ru>
+			<en-us>rewards</en-us>
+		</Translates>
+	</Key>
+	<Key Name="TouchToPlay">
+		<Translates>
+			<ru>нажми, чтобы играть</ru>
+			<en-us>touch anywhere to play</en-us>
+		</Translates>
+	</Key>
+
+	
+	<Key Name="Active">
+		<Translates>
+			<ru>выбрано</ru>
+			<en-us>active</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Select">
+		<Translates>
+			<ru>выбрать</ru>
+			<en-us>selected</en-us>
+		</Translates>
+	</Key>
+
+	
+	<Key Name="Sounds">
+		<Translates>
+			<ru>звуки</ru>
+			<en-us>sounds</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Music">
+		<Translates>
+			<ru>музыка</ru>
+			<en-us>music</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Language">
+		<Translates>
+			<ru>язык</ru>
+			<en-us>language</en-us>
+		</Translates>
+	</Key>
+
+	
+	<Key Name="Run100">
+		<Translates>
+			<ru>пробеги 100 метров</ru>
+			<en-us>run 100 meters</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Run500">
+		<Translates>
+			<ru>пробеги 500 метров</ru>
+			<en-us>run 500 meters</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Buy1">
+		<Translates>
+			<ru>купи первое кольцо</ru>
+			<en-us>buy first ring</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Jump100">
+		<Translates>
+			<ru>перепрыгни 100 препятствий</ru>
+			<en-us>jump over 100 obstacles</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Jump150">
+		<Translates>
+			<ru>перепрыгни 150 препятствий</ru>
+			<en-us>jump over 150 obstacles</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Lose20">
+		<Translates>
+			<ru>врежься 20 раз</ru>
+			<en-us>lose 20 times</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Lose30">
+		<Translates>
+			<ru>врежься 30 раз</ru>
+			<en-us>lose 30 times</en-us>
+		</Translates>
+	</Key>
+
+	<Key Name="m">
+		<Translates>
+			<ru>м</ru>
+			<en-us>m</en-us>
+		</Translates>
+	</Key>
+	<Key Name="GameOver">
+		<Translates>
+			<ru>игра окончена :(</ru>
+			<en-us>game over :(</en-us>
+		</Translates>
+	</Key>
+	<Key Name="Restart">
+		<Translates>
+			<ru>нажми для рестарта</ru>
+			<en-us>tap to restart</en-us>
+		</Translates>
+	</Key>
+	<Key Name="URаn">
+		<Translates>
+			<ru>пробежал</ru>
+			<en-us>you rаn</en-us>
+		</Translates>
+	</Key>
+	<Key Name="NewRecord">
+		<Translates>
+			<ru>новый рекорд!</ru>
+			<en-us>new record!</en-us>
+		</Translates>
+	</Key>
+
+	<Key Name="Yes">
+		<Translates>
+			<ru>да</ru>
+			<en-us>yes</en-us>
+		</Translates>
+	</Key>
+	<Key Name="No">
+		<Translates>
+			<ru>нет</ru>
+			<en-us>no</en-us>
+		</Translates>
+	</Key>
+	<Key Name="WatchAd">
+		<Translates>
+			<ru>получить 100 монет за просмотр рекламы?</ru>
+			<en-us>get 100 coins for watching ad?</en-us>
+		</Translates>
+	</Key>
+</Keys>

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ec9ccaac974f499796b6c1ecece244, type: 3}
+  m_Name: SeaPack
+  m_EditorClassIdentifier: 
+  _id: 1
+  _chunks:
+  - {fileID: 5562026402166729356, guid: 129b858e3cf24db42850a2c88dbdc0ea, type: 3}
+  - {fileID: 5562026402166729356, guid: 13227a42c31e381488b1c4ecca7ec863, type: 3}
+  - {fileID: 5562026402166729356, guid: 6dca8db9411d069499d77ed8b40e663e, type: 3}
+  - {fileID: 5562026402166729356, guid: 38039f45e7257a4468402b5c00bc3a43, type: 3}
+  - {fileID: 5562026402166729356, guid: 7db5133c3ecd49f4086b6e5c4f566ed2, type: 3}
+  _tile: {fileID: 4863464941480631520, guid: 3aff305b9b348b045a0f151bea36db78, type: 3}
