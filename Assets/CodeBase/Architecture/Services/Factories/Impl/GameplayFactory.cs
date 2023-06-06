@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using Achievements.Detecting;
+﻿using Achievements.Detecting;
 using Architecture.Services.AssetProviding;
 using Architecture.Services.Gameplay;
 using Architecture.Services.General;
-using Architecture.Services.PersistentProgress;
 using Audio;
 using Gameplay.Environment.BackgroundGeneration;
 using Gameplay.Environment.ChunkGeneration.Impl;
@@ -86,10 +84,7 @@ namespace Architecture.Services.Factories.Impl {
             return chosenChunk;
         }
 
-        private void ConstructAudio(GameObject gameObject) {
-            foreach (var source in gameObject.GetComponentsInChildren<Source>()) {
-                source.Construct(_audioService);
-            }
-        }
+        private void ConstructAudio(GameObject gameObject) 
+            => gameObject.DoForComponentsInChildren<Source>(source => source.Construct(_audioService));
     }
 }

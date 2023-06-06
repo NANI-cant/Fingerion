@@ -61,10 +61,10 @@ namespace Architecture.Services.Factories.Impl {
             var screen = _instantiateProvider.Instantiate(_uiProvider.GetScreen(screenId), rootCanvas.transform);
             
             ConstructBase(screen, uiService, rootCanvas);
-            ConstructShop(screen);
-            ConstructAchievements(screen);
-            ConstructSettings(screen);
-            ConstructLose(screen);
+            ConstructShopScreen(screen);
+            ConstructAchievementsScreen(screen);
+            ConstructSettingsScreen(screen);
+            ConstructLoseScreen(screen);
 
             return screen;
         }
@@ -72,89 +72,58 @@ namespace Architecture.Services.Factories.Impl {
         public ItemView CreateShopItem(ItemView template, Transform container, IItemData data) {
             var item = _instantiateProvider.Instantiate(template, container);
             item.Construct(data);
-            foreach (var localizedText in item.GetComponentsInChildren<LocalizedText>()) {
-                localizedText.Construct(_localizationService);
-            }
-            
+            item.DoForComponentsInChildren<LocalizedText>(lt => lt.Construct(_localizationService));
+
             return item;
         }
 
         public AchievementView CreateAchievement(AchievementView template, Transform container, IAchievement data) {
-            var achievement = _instantiateProvider.Instantiate(template, container);
-            achievement.Construct(data);
-            foreach (var localizedText in achievement.GetComponentsInChildren<LocalizedText>()) {
-                localizedText.Construct(_localizationService);
-                localizedText.SetKey(data.Label);
-            }
-            
-            return achievement;
+            var achievementScreen = _instantiateProvider.Instantiate(template, container);
+            achievementScreen.Construct(data);
+            achievementScreen.DoForComponentsInChildren<LocalizedText>(lt => {
+                lt.Construct(_localizationService);
+                lt.SetKey(data.Label);
+            });
+
+            return achievementScreen;
         }
 
         public Dialog CreateDialog(Dialog dialogTemplate, Canvas uiRoot) {
             var dialog = _instantiateProvider.Instantiate(dialogTemplate, uiRoot.transform);
-            foreach (var localizedText in dialog.GetComponentsInChildren<LocalizedText>()) {
-                localizedText.Construct(_localizationService);
-            }
+            dialog.DoForComponentsInChildren<LocalizedText>(lt => lt.Construct(_localizationService));
             return dialog;
         }
 
-        private void ConstructAchievements(Screen screen) {
+        private void ConstructAchievementsScreen(Screen screen) {
             if (!screen.TryGetComponent<AchievementsScreen>(out var achievementsScreen)) return;
-
             achievementsScreen.Construct(_achievementService, _metricProvider.Achievements, this);
         }
 
-        private void ConstructShop(Screen screen) {
+        private void ConstructShopScreen(Screen screen) {
             if (!screen.TryGetComponent<ShopScreen>(out var shopScreen)) return;
-            
             shopScreen.Construct(_metricProvider.Items, _bankService, _persistentProgressService, this, _ringService);
         }
 
-        private void ConstructSettings(Screen screen) {
+        private void ConstructSettingsScreen(Screen screen) {
             if (!screen.TryGetComponent<SettingsScreen>(out var settingsScreen)) return;
-            
             settingsScreen.Construct(_audioService, _localizationService);
         }
 
-        private void ConstructLose(Screen screen) {
+        private void ConstructLoseScreen(Screen screen) {
             if (!screen.TryGetComponent<LoseScreen>(out var loseScreen)) return;
             loseScreen.Construct(_scoreService);
         }
 
         private void ConstructBase(Screen screen, IUIService uiService, Canvas rootCanvas) {
-            var gameObject = screen.gameObject;
-            
-            foreach (var navButton in gameObject.GetComponentsInChildren<NavigationButton>()) {
-                navButton.Construct(uiService);
-            }
-            
-            foreach (var bankView in gameObject.GetComponentsInChildren<BankView>()) {
-                bankView.Construct(_bankService);
-            }
-            
-            foreach (var localizedText in gameObject.GetComponentsInChildren<LocalizedText>()) {
-                localizedText.Construct(_localizationService);
-            }
-            
-            foreach (var currentScore in gameObject.GetComponentsInChildren<CurrentScoreView>()) {
-                currentScore.Construct(_scoreService);
-            }
-            
-            foreach (var bestScore in gameObject.GetComponentsInChildren<BestScoreView>()) {
-                bestScore.Construct(_scoreService);
-            }
-            
-            foreach (var ringView in gameObject.GetComponentsInChildren<RingUIView>()) {
-                ringView.Construct(_ringService);
-            }
-            
-            foreach (var buttonSound in gameObject.GetComponentsInChildren<ButtonSound>()) {
-                buttonSound.Construct(_audioService, _soundsSource);
-            }
-            
-            foreach (var rewardButton in gameObject.GetComponentsInChildren<RewardButton>()) {
-                rewardButton.Construct(_adService, this, rootCanvas);
-            }
+            screen
+                .DoForComponentsInChildren<NavigationButton>(nb => nb.Construct(uiService))
+                .DoForComponentsInChildren<BankView>(bv => bv.Construct(_bankService))
+                .DoForComponentsInChildren<LocalizedText>(lt => lt.Construct(_localizationService))
+                .DoForComponentsInChildren<CurrentScoreView>(cs => cs.Construct(_scoreService))
+                .DoForComponentsInChildren<BestScoreView>(bs => bs.Construct(_scoreService))
+                .DoForComponentsInChildren<RingUIView>(rv => rv.Construct(_ringService))
+                .DoForComponentsInChildren<ButtonSound>(ns => ns.Construct(_audioService, _soundsSource))
+                .DoForComponentsInChildren<RewardButton>(rb => rb.Construct(_adService, this, rootCanvas));
         }
     }
 }
